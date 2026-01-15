@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cakely-primary: #1c1917;
+  --color-cakely-background: #fafaf9;
+  --font-sans: "Inter", "Montserrat", sans-serif;
+}
+
+@layer components {
+  .input {
+    @apply border-b border-stone-300 bg-transparent px-1 py-3 text-lg font-light tracking-tight transition-all duration-300 placeholder:text-stone-300 focus:border-stone-800 focus:outline-none w-full max-w-md mx-auto block text-center uppercase;
+  }
+
+  .loader {
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #e7e5e4;
+    border-right-color: #1c1917;
+    animation: rotate 1s infinite linear;
+  }
+  @keyframes rotate {to{transform: rotate(1turn)}}
+}
